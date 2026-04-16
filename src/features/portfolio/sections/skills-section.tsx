@@ -48,18 +48,47 @@ export function SkillsSection() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                tags={project.tags}
-                link={project.link}
-                status={project.status}
-              />
-            ))}
-          </div>
+          {/* ==================== SECTION PROJETS ==================== */}
+          <section id="projects" className="py-20 bg-background">
+            <div className="max-w-6xl mx-auto px-6">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold tracking-tight mb-3">
+                  Mes Projets
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-md mx-auto">
+                  Quelques réalisations qui me tiennent à cœur
+                </p>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-2">
+                {projects.map((project) => (
+                  <ProjectCard
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    tags={project.tags}
+                    link={project.link}
+                    status={project.status}
+                    image={project.image}
+                  />
+                ))}
+              </div>
+
+              {/* Bouton pour voir plus de projets sur GitHub */}
+              <div className="flex justify-center mt-12">
+                <a
+                  href="https://github.com/Nou-Fy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 rounded-full border border-border px-8 py-3 text-sm font-medium transition-all hover:border-primary hover:text-primary">
+                  Voir tous mes projets sur GitHub
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </a>
+              </div>
+            </div>
+          </section>
 
           <div className="mt-8 text-center">
             <a

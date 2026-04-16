@@ -147,6 +147,7 @@ export const projects: readonly {
   tags: readonly string[];
   link: string;
   status: ProjectStatus;
+  image?: string;
 }[] = [
   {
     title: "Plateforme de discussion en ligne",
@@ -155,6 +156,7 @@ export const projects: readonly {
     tags: ["NextJs", "PostgreSQL", "TypeScript"],
     link: "https://github.com/Nou-Fy/Todo_Dev.git",
     status: "Terminé",
+    image: "/uploads/noufy-blog.png",
   },
   {
     title: "Outils de gestion des tâches",
@@ -163,6 +165,7 @@ export const projects: readonly {
     tags: ["NextJs", "PostgreSQL", "TypeScript"],
     link: "https://github.com/Nou-Fy/Todo_Dev.git",
     status: "Terminé",
+    image: "/uploads/todo-dev.png",
   },
 ];
 
