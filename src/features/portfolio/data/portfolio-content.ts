@@ -227,6 +227,7 @@ export const contacts = [
     icon: "map-pin" as ContactIcon,
     label: "Adresse",
     value: "Vontovorona, Tana 102, Madagascar",
-    href: "#",
+    href: "https://www.google.com/maps/@-18.984251,47.4209336,289m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDQxNC4wIKXMDSoASAFQAw%3D%3D",
   },
 ] as const;
+git add .
