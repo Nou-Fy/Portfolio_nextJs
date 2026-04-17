@@ -1,28 +1,21 @@
-import { ExperienceCard } from "@/features/portfolio/components/experience-card";
-import { SectionHeading } from "@/features/portfolio/components/section-heading";
-import { experiences } from "@/features/portfolio/data/portfolio-content";
+import { getSectionStyles } from "@/styles/section-layout";
+import { ExperienceCard } from "../components/experience-card";
+import { SectionHeading } from "../components/section-heading";
+import { experiences } from "../data/portfolio-content";
 
 export function ExperienceSection() {
-  return (
-    <section
-      id="experience"
-      className="bg-gradient-to-b from-background via-background to-muted/30 py-20 md:py-32">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <SectionHeading
-          title="Experiences"
-          description="Mon parcours professionnel et les etapes marquantes."
-        />
+  const styles = getSectionStyles();
 
+  return (
+    <section id="experience" className={styles.section}>
+      <div className={styles.container}>
+        <SectionHeading
+          title="Expériences professionnelles et stages"
+          description="Mon parcours professionnel, incluant stages et projets réalisés."
+        />
         <div className="space-y-6">
           {experiences.map((exp) => (
-            <ExperienceCard
-              key={exp.id}
-              title={exp.title}
-              company={exp.company}
-              location={exp.location}
-              period={exp.period}
-              tasks={exp.tasks}
-            />
+            <ExperienceCard key={exp.id} {...exp} />
           ))}
         </div>
       </div>

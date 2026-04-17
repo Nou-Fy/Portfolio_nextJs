@@ -110,7 +110,7 @@ export const skillCategories = [
     color: "bg-secondary/10 text-secondary border-secondary/20",
   },
   {
-    name: "Tools & Software",
+    name: "Outils & Logiciels",
     skills: [
       "VS Code (éditeur principal)",
       "Visual Studio",
@@ -129,7 +129,7 @@ export const skillCategories = [
     color: "bg-accent/10 text-accent border-accent/20",
   },
   {
-    name: "Other Specializations",
+    name: "Autres Spécialisations",
     skills: [
       "Développement Full Stack",
       "Méthodologie Scrum",
@@ -172,7 +172,7 @@ export const projects: readonly {
 export const languages = [
   { label: "Malagasy", level: "Native", progress: "w-full" },
   { label: "Français", level: "Courant", progress: "w-5/6" },
-  { label: "Anglais", level: "Intermédiaire", progress: "w-4/5" },
+  { label: "Anglais", level: "Académique", progress: "w-2/5" },
 ] as const;
 
 export const educationItems = [

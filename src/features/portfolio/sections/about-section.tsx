@@ -1,17 +1,18 @@
 import { aboutHighlights } from "@/features/portfolio/data/portfolio-content";
+import { getSectionStyles } from "@/styles/section-layout";
 
 export function AboutSection() {
+  const styles = getSectionStyles();
+
   return (
-    <section
-      id="about"
-      className="border-t border-border bg-background/80 py-20 md:py-32">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
+    <section id="about" className={styles.section}>
+      <div className={styles.container}>
+        <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
-            <h2 className="mb-6 text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">
-              A propos de moi
+            <h2 className="mb-6 text-3xl font-bold sm:text-5xl">
+              À propos de moi
             </h2>
-            <p className="mb-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="mb-4 text-muted-foreground sm:text-lg text-balance">
               Jeune homme de 32 ans, dynamique et passionné par le numérique et
               l&apos;énergie. Je m&apos;engage pleinement dans mes projets avec
               sincérité, rigueur et méticulosité.
@@ -21,39 +22,35 @@ export function AboutSection() {
               et apprendre des autres. Ces atouts me permettent de créer des
               solutions innovantes et durables.
             </p>
-            <div className="flex flex-wrap gap-6">
+            <div className="flex gap-6 pt-4">
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-primary">0+</span>
-                <span className="text-sm text-muted-foreground">
-                  d'années d'expérience
+                <span className="text-xs uppercase text-muted-foreground">
+                  Expérience
                 </span>
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl font-bold text-secondary">3+</span>
-                <span className="text-sm text-muted-foreground">
-                  projet personnels
+                <span className="text-xs uppercase text-muted-foreground">
+                  Projets Persos
                 </span>
               </div>
             </div>
           </div>
-
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-2xl" />
-            <div className="relative rounded-2xl border border-border bg-card/90 p-5 shadow-sm shadow-primary/5 sm:p-8">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-2xl" />
+            <div className="relative rounded-2xl border bg-card/90 p-8">
               <div className="space-y-4">
-                {aboutHighlights.map((highlight) => (
-                  <div key={highlight.title} className="flex items-start gap-4">
+                {aboutHighlights.map((h) => (
+                  <div key={h.title} className="flex gap-4">
                     <div
-                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg ${highlight.iconClassName}`}
-                    >
-                      <span className="text-xl">{highlight.icon}</span>
+                      className={`h-12 w-12 shrink-0 flex items-center justify-center rounded-lg ${h.iconClassName}`}>
+                      {h.icon}
                     </div>
-                    <div className="min-w-0">
-                      <h3 className="font-semibold text-foreground">
-                        {highlight.title}
-                      </h3>
+                    <div>
+                      <h3 className="font-semibold">{h.title}</h3>
                       <p className="text-sm text-muted-foreground">
-                        {highlight.description}
+                        {h.description}
                       </p>
                     </div>
                   </div>

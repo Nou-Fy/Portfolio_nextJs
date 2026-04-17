@@ -20,19 +20,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/icon/icon-light-32x32.png",
+        type: "image/svg+xml", // s'adapte light/dark automatiquement
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/apple-icon.png", // → apple-icon-180.png renommé
   },
 };
 
@@ -43,13 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${_geist.className} min-h-screen font-sans antialiased`}>
+      <body
+        className={`${_geist.className} min-h-screen font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
-        >
+          disableTransitionOnChange>
           {children}
         </ThemeProvider>
         {process.env.NODE_ENV === "production" && <Analytics />}
