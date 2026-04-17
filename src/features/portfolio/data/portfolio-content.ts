@@ -3,6 +3,7 @@ import type {
   NavItem,
   ProjectStatus,
 } from "@/features/portfolio/types";
+import { Target } from "lucide-react";
 
 export const navItems: readonly NavItem[] = [
   { href: "#about", label: "A propos" },
@@ -216,17 +217,20 @@ export const contacts = [
     label: "Email",
     value: "rakotonantsoina@gmail.com",
     href: "https://mail.google.com/mail/?view=cm&to=rakotonantsoina@gmail.com",
+    target: "_blank",
   },
   {
     icon: "phone" as ContactIcon,
     label: "Téléphone",
     value: "+261 34 84 924 925",
     href: "tel:+2613484924925",
+    target: "_blank",
   },
   {
     icon: "map-pin" as ContactIcon,
     label: "Adresse",
     value: "Vontovorona, Tana 102, Madagascar",
     href: "https://www.google.com/maps/@-18.984251,47.4209336,289m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDQxNC4wIKXMDSoASAFQAw%3D%3D",
+    target: "_blank",
   },
 ] as const;
