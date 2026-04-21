@@ -165,7 +165,7 @@ export const projects: readonly {
       "Développement d'une architecture microservices pour la gestion de stocks en temps réel.",
     tags: ["NextJs", "PostgreSQL", "TypeScript"],
     link: "https://github.com/Nou-Fy/Todo_Dev.git",
-    status: "Terminé",
+    status: "En cours",
     image: "/uploads/todo-dev.png",
   },
 ];
